@@ -1,0 +1,10 @@
+ifndef QUANTUM_DIR
+	include ../../../../Makefile
+endif
+
+KEY_LOCK_ENABLE = no
+BLUETOOTH_ENABLE = no
+CONSOLE_ENABLE = no
+BACKLIGHT_ENABLE = yes
+MOUSEKEY_ENABLE = yes
+MIDI_ENABLE = no

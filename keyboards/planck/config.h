@@ -53,7 +53,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MATRIX_HAS_GHOST
 
 /* number of backlight levels */
-#define BACKLIGHT_LEVELS 3
+#define BACKLIGHT_LEVELS 4
+#define BACKLIGHT_BREATHING
+#define BREATHING_PERIOD 1
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCING_DELAY 5

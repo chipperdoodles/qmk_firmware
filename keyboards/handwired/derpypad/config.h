@@ -13,22 +13,22 @@
 #define CATERINA_BOOTLOADER
 
 /* key matrix size */
-#define MATRIX_ROWS 5
+#define MATRIX_ROWS 6
 #define MATRIX_COLS 4
 
 /* key matrix pins */
-#define MATRIX_ROW_PINS { F7, F6, F5, F4, F1 }
-#define MATRIX_COL_PINS { C6, D7, B5, B6 }
+#define MATRIX_ROW_PINS { F6, F0, D7, B5, D6, C7 }
+#define MATRIX_COL_PINS { F7, F5, F4, F1 }
 #define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL
 
-/* number of backlight levels */
-
-#ifdef BACKLIGHT_PIN
-#define BACKLIGHT_LEVELS 0
-#endif
+#define USE_I2C
+#define SSD1306OLED
+//#define OLED_ROTATE180
+#define SSD1306_ADDRESS 0x3D
+#define ADAFRUIT_BLE_ENABLE
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCING_DELAY 5
@@ -46,11 +46,5 @@
 
 /* prevent stuck modifiers */
 #define PREVENT_STUCK_MODIFIERS
-
-
-#ifdef RGB_DI_PIN
-#define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 0
-#endif
 
 #endif

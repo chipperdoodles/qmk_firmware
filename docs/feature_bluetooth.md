@@ -1,8 +1,6 @@
 # Bluetooth
 
 ## Bluetooth Known Supported Hardware
-
-<<<<<<< HEAD
 Currently Bluetooth support is limited to avr based chips. For Bluetooth 2.1 Qmk has support for RN-42 HID Firmware and Bluefruit EZ Key the later of which is not produced anymore. For more recent BLE protocols currently only the Adafruit Bluefruit SPI friend is directly supported. BLE is needed to connect to iOS devices. Note iOS does not support Mouse Input.
 
 |Board                        |Bluetooth Protocol          |Connection Type |Rules.mk                   |Config.h  |

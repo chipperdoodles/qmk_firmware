@@ -2,11 +2,11 @@
 
 ![NucleoBoard](imgur.com image replace me!)
 
-A short description of the keyboard/project
+An STM32F401RE Nucleo board Test build
 
-Keyboard Maintainer: [You](https://github.com/yourusername)  
-Hardware Supported: The PCBs, controllers supported  
-Hardware Availability: links to where you can find this hardware
+Keyboard Maintainer:  
+Hardware Supported: Phantom 7Bit header
+Hardware Availability: 
 
 Make example for this keyboard (after setting up your build environment):
 

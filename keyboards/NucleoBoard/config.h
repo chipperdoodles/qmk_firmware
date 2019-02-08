@@ -27,12 +27,18 @@
 #define DESCRIPTION     Test Board
 
 /* key matrix size */
-#define MATRIX_ROWS 1
-#define MATRIX_COLS 1
+/*
+ *     col: { B4, D2, C12, C11, C10, A15, A10, A9, A8, C9, C8, C7, C6, B15, B14, B13, B2, B1, B0, C4 }
+ *     row: { B12, C5, A7, A6, A5, A4 }
+ */
 
-#define MATRIX_ROW_PINS { B9 }
-#define MATRIX_COL_PINS { B0 }
+#define MATRIX_COLS 20
+#define MATRIX_ROWS 6
 
+/* Not used by arm
+#define MATRIX_COL_PINS { B4, D2, C12, C11, C10, A15, A10, A9, A8, C9, C8, C7, C6, B15, B14, B13, B2, B1, B0, C4 }
+#define MATRIX_ROW_PINS { B12, C5, A7, A6, A5, A4 }
+*/
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 6

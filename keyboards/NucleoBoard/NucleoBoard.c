@@ -14,12 +14,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "NucleoBoard.h"
+#include "nucleoboard.h"
 
 void matrix_init_kb(void) {
-  // Turn status LED on
-  setPinOutput(C13);
-  writePinHigh(C13);
 
-  matrix_init_user();
+}
+
+void matrix_scan_kb(void) {
+
 }

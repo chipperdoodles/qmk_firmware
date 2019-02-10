@@ -9,10 +9,17 @@
 #include "matrix.h"
 
 /*
- *     col: { B4, D2, C12, C11, C10, A15, A10, A9, A8, C9, C8, C7, C6, B15, B14, B13, B2, B1, B0, C4 }
- *     row: { B12, C5, A7, A6, A5, A4 }
+ *     MarcBoard Matrix
+ *    20 col: { B4, D2, C12, C11, C10, A15, A10, A9, A8, C9, C8, C7, C6, B15, B14, B13, B2, B1, B0, C4 }
+ *     6 row: { B12, C5, A7, A6, A5, A4 }
  */
 
+/*     Phantom Testboard Matrix
+ *     17 col: { B4, D2, C12, C11, C10, A15, A10, A9, A8, C9, C8, C7, C6, B15, B14, B13, B2 }
+ *     6 row: { B12, C5, A7, A6, A5, A4 }
+ */
+ 
+ 
 /* matrix state(1:on, 0:off) */
 static matrix_row_t matrix[MATRIX_ROWS];
 static matrix_row_t matrix_debouncing[MATRIX_COLS];
@@ -60,9 +67,11 @@ void matrix_init(void) {
     palSetPadMode(GPIOB, 14, PAL_MODE_OUTPUT_PUSHPULL);
     palSetPadMode(GPIOB, 13, PAL_MODE_OUTPUT_PUSHPULL);
     palSetPadMode(GPIOB, 2, PAL_MODE_OUTPUT_PUSHPULL);
-    palSetPadMode(GPIOB, 1, PAL_MODE_OUTPUT_PUSHPULL);
-    palSetPadMode(GPIOB, 0, PAL_MODE_OUTPUT_PUSHPULL);
-    palSetPadMode(GPIOC, 4, PAL_MODE_OUTPUT_PUSHPULL);
+    /*
+    * palSetPadMode(GPIOB, 1, PAL_MODE_OUTPUT_PUSHPULL);
+    * palSetPadMode(GPIOB, 0, PAL_MODE_OUTPUT_PUSHPULL);
+    * palSetPadMode(GPIOC, 4, PAL_MODE_OUTPUT_PUSHPULL);
+    */
     
     //ROW
     palSetPadMode(GPIOB, 12,PAL_MODE_INPUT_PULLDOWN);
@@ -100,15 +109,19 @@ uint8_t matrix_scan(void) {
             case 7: palSetPad(GPIOA, 9); break;
             case 8: palSetPad(GPIOA, 8); break;
             case 9: palSetPad(GPIOC, 8); break;
-            case 10: palSetPad(GPIOC, 7); break;
-            case 11: palSetPad(GPIOC, 6); break;
-            case 12: palSetPad(GPIOB, 15); break;
-            case 13: palSetPad(GPIOB, 14); break;
-            case 14: palSetPad(GPIOB, 13); break;
-            case 15: palSetPad(GPIOB, 2); break;
-            case 16: palSetPad(GPIOB, 1); break;
-            case 17: palSetPad(GPIOB, 0); break;
-            case 18: palSetPad(GPIOC, 4); break;
+            case 10: palSetPad(GPIOC, 8); break;
+            case 11: palSetPad(GPIOC, 7); break;
+            case 12: palSetPad(GPIOC, 6); break;
+            case 13: palSetPad(GPIOB, 15); break;
+            case 14: palSetPad(GPIOB, 14); break;
+            case 15: palSetPad(GPIOB, 13); break;
+            case 16: palSetPad(GPIOB, 2); break;
+            /* 
+            * case 17: palSetPad(GPIOB, 1); break;
+            * case 18: palSetPad(GPIOB, 0); break;
+            * case 19: palSetPad(GPIOC, 4); break;
+            */
+
         }
 
         // need wait to settle pin state
@@ -136,16 +149,19 @@ uint8_t matrix_scan(void) {
             case 6: palClearPad(GPIOA, 10); break;
             case 7: palClearPad(GPIOA, 9); break;
             case 8: palClearPad(GPIOA, 8); break;
-            case 9: palClearPad(GPIOC, 8); break;
-            case 10: palClearPad(GPIOC, 7); break;
-            case 11: palClearPad(GPIOC, 6); break;
-            case 12: palClearPad(GPIOB, 15); break;
-            case 13: palClearPad(GPIOB, 14); break;
-            case 14: palClearPad(GPIOB, 13); break;
-            case 15: palClearPad(GPIOB, 2); break;
-            case 16: palClearPad(GPIOB, 1); break;
-            case 17: palClearPad(GPIOB, 0); break;
-            case 18: palClearPad(GPIOC, 4); break;
+            case 9: palClearPad(GPIOC, 9); break;
+            case 10: palClearPad(GPIOC, 8); break;
+            case 11: palClearPad(GPIOC, 7); break;
+            case 12: palClearPad(GPIOC, 6); break;
+            case 13: palClearPad(GPIOB, 15); break;
+            case 14: palClearPad(GPIOB, 14); break;
+            case 15: palClearPad(GPIOB, 13); break;
+            case 16: palClearPad(GPIOB, 2); break;
+            /*
+            * case 17: palClearPad(GPIOB, 1); break;
+            * case 18: palClearPad(GPIOB, 0); break;
+            * case 19: palClearPad(GPIOC, 4); break;
+            */
         }
 
         if (matrix_debouncing[col] != data) {

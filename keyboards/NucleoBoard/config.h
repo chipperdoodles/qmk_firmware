@@ -26,16 +26,18 @@
 #define PRODUCT         NucleoBoard
 #define DESCRIPTION     Test Board
 
+// #define STM32_BOOTLOADER_ADDRESS 0x1FFF76DE
+
 /* key matrix size */
 /*
  *     col: { B4, D2, C12, C11, C10, A15, A10, A9, A8, C9, C8, C7, C6, B15, B14, B13, B2, B1, B0, C4 }
  *     row: { B12, C5, A7, A6, A5, A4 }
  */
 
-#define MATRIX_COLS 20
+#define MATRIX_COLS 17
 #define MATRIX_ROWS 6
 
-/* Not used by arm
+/* Not used by ARM, only for AVR
 #define MATRIX_COL_PINS { B4, D2, C12, C11, C10, A15, A10, A9, A8, C9, C8, C7, C6, B15, B14, B13, B2, B1, B0, C4 }
 #define MATRIX_ROW_PINS { B12, C5, A7, A6, A5, A4 }
 */

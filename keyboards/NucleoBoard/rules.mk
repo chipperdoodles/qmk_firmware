@@ -32,7 +32,7 @@ USE_FPU = yes
 # 0x00000000-0x00001000 area is occupied by bootlaoder.*/
 # The CORTEX_VTOR... is needed only for MCHCK/Infinity KB
 # OPT_DEFS = -DCORTEX_VTOR_INIT=0x08005000
-# OPT_DEFS =
+OPT_DEFS =
 
 # Options to pass to dfu-util when flashing
 DFU_ARGS = -d 0483:df11 -a 0 -s 0x08000000:leave
@@ -49,7 +49,7 @@ CONSOLE_ENABLE = no  # Console for debug
 COMMAND_ENABLE = no    # Commands for debug and configuration
 #SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
 #NKRO_ENABLE = yes     # USB Nkey Rollover
-#AUDIO_ENABLE = yes
+AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = no
 CUSTOM_MATRIX = yes
 #SERIAL_LINK_ENABLE = yes

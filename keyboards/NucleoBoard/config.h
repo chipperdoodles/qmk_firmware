@@ -26,7 +26,8 @@
 #define PRODUCT         NucleoBoard
 #define DESCRIPTION     Test Board
 
-// #define STM32_BOOTLOADER_ADDRESS 0x1FFF76DE
+#define STM32_BOOTLOADER_ADDRESS 0x1FFF76DE
+
 
 /* key matrix size */
 /*

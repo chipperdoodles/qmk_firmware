@@ -1,5 +1,4 @@
-/*
- * Copyright 2017 skully <skullydazed@gmail.com>
+/* Copyright 2019 Martin Knobel
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,36 +19,26 @@
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xC1ED
-#define PRODUCT_ID      0x2350
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    Clueboard
-#define PRODUCT         Clueboard 60%
-#define DESCRIPTION     Clueboard 60%
-
-/* Address for jumping to bootloader on STM32 chips. */
-/* It is chip dependent, the correct number can be looked up here:
- * http://www.st.com/web/en/resource/technical/document/application_note/CD00167594.pdf
- */
-#define STM32_BOOTLOADER_ADDRESS 0x1FFFD800
+#define VENDOR_ID       0xFEED
+#define PRODUCT_ID      0x6060
+#define DEVICE_VER      0x0006
+#define MANUFACTURER    Noties
+#define PRODUCT         NucleoBoard
+#define DESCRIPTION     Test Board
 
 /* key matrix size */
-#define MATRIX_ROWS 5
-#define MATRIX_COLS 15
-
 /*
- * Keyboard Matrix Assignments
- *
- * COLS: Pins used for columns, left to right
- * ROWS: Pins used for rows, top to bottom
- * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
- *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
- *
+ *     col: { B4, D2, C12, C11, C10, A15, A10, A9, A8, C9, C8, C7, C6, B15, B14, B13, B2, B1, B0, C4 }
+ *     row: { B12, C5, A7, A6, A5, A4 }
+ */
+
+#define MATRIX_COLS 20
+#define MATRIX_ROWS 6
+
+/* Not used by arm
+#define MATRIX_COL_PINS { B4, D2, C12, C11, C10, A15, A10, A9, A8, C9, C8, C7, C6, B15, B14, B13, B2, B1, B0, C4 }
+#define MATRIX_ROW_PINS { B12, C5, A7, A6, A5, A4 }
 */
-#define MATRIX_ROW_PINS { B0, B1, B2, A15, A10 }
-#define MATRIX_COL_PINS { A2, A3, A6, B14, B15, A8, A9, A7, B3, B4, C15, C14, C13, B5, B6 }
-#define UNUSED_PINS { A0, A1, A9, B7, B8, B9, B10, B11, B12, B13 }
-#define DIODE_DIRECTION COL2ROW
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 6
@@ -79,6 +68,11 @@
  *
  */
 //#define FORCE_NKRO
+
+/* key combination for magic key command */
+#define IS_COMMAND() ( \
+  keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
+)
 
 /*
  * Feature disable options
@@ -121,6 +115,13 @@
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 1
 
- /* Backlight configuration
- */
-#define BACKLIGHT_LEVELS 1
+// #define WS2812_LED_N 2
+// #define RGBLED_NUM WS2812_LED_N
+// #define WS2812_TIM_N 2
+// #define WS2812_TIM_CH 2
+// #define PORT_WS2812     GPIOA
+// #define PIN_WS2812      1
+// #define WS2812_DMA_STREAM STM32_DMA1_STREAM2  // DMA stream for TIMx_UP (look up in reference manual under DMA Channel selection)
+//#define WS2812_DMA_CHANNEL 7                  // DMA channel for TIMx_UP
+//#define WS2812_EXTERNAL_PULLUP
+

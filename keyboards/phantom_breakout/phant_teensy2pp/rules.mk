@@ -1,5 +1,5 @@
 # MCU name
-MCU = atmega32u4
+MCU = at90usb1286
 
 # Processor frequency.
 #     This will define a symbol, F_CPU, in all source code files equal to the
@@ -12,7 +12,8 @@ MCU = atmega32u4
 #     does not *change* the processor frequency - it should merely be updated to
 #     reflect the processor speed set externally so that the code can use accurate
 #     software delays.
-F_CPU = 8000000
+F_CPU = 16000000
+
 
 #
 # LUFA specific
@@ -38,27 +39,32 @@ OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 
 
 # Boot Section Size in *bytes*
-OPT_DEFS += -DBOOTLOADER_SIZE=4096
+#   Teensy halfKay   512
+#   Teensy++ halfKay 1024
+#   Atmel DFU loader 4096
+#   LUFA bootloader  4096
+#   USBaspLoader     2048
+OPT_DEFS += -DBOOTLOADER_SIZE=1024
 
-#Bootloader Types
-BOOTLOADER = caterina
-
-#Bluetooth config
-BLUETOOTH = AdafruitBLE
 
 # Build Options
-BOOTMAGIC_ENABLE = no
-MOUSEKEY_ENABLE = yes
-EXTRAKEY_ENABLE = yes
-CONSOLE_ENABLE = no
-COMMAND_ENABLE = no
-SLEEP_LED_ENABLE = no
-NKRO_ENABLE = no
-BACKLIGHT_ENABLE = no
-AUDIO_ENABLE = no
-MIDI_ENABLE = no
-RGBLIGHT_ENABLE = no
+#   change yes to no to disable
+#
+BOOTMAGIC_ENABLE = yes      # Virtual DIP switch configuration(+1000)
+MOUSEKEY_ENABLE = yes       # Mouse keys(+4700)
+EXTRAKEY_ENABLE = yes       # Audio control and System control(+450)
+CONSOLE_ENABLE = no         # Console for debug(+400)
+COMMAND_ENABLE = yes        # Commands for debug and configuration
+# Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
+SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
+# if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
+NKRO_ENABLE = yes           # USB Nkey Rollover
+BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
+RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight. Do not enable this with audio at the same time.
+MIDI_ENABLE = no            # MIDI support (+2400 to 4200, depending on config)
+UNICODE_ENABLE = no         # Unicode
+BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
+AUDIO_ENABLE = no           # Audio output on port C6
+FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 
-SRC = i2c.c \
-    ssd1306.c
-
+LAYOUTS = tkl_ansi tkl_iso 7bit

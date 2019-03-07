@@ -7,7 +7,7 @@
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    qmkbuilder
+#define MANUFACTURER    noties
 #define PRODUCT         DerpyPad
 #define DESCRIPTION     Keypad
 #define CATERINA_BOOTLOADER
@@ -28,7 +28,6 @@
 #define SSD1306OLED
 //#define OLED_ROTATE180
 #define SSD1306_ADDRESS 0x3D
-#define ADAFRUIT_BLE_ENABLE
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCING_DELAY 5

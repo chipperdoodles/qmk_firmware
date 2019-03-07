@@ -1,6 +1,6 @@
 # MCU name
-#MCU = at90usb1287
-MCU = atmega32u4
+MCU = at90usb1286
+#MCU = atmega32u4
 
 # Processor frequency.
 #     This will define a symbol, F_CPU, in all source code files equal to the
@@ -68,4 +68,4 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = no           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 
-LAYOUTS = tkl_ansi tkl_iso
+LAYOUTS = tkl_ansi tkl_iso 7bit

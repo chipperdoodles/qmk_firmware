@@ -39,7 +39,7 @@
 #define STM32_NO_INIT                       FALSE
 #define STM32_HSI_ENABLED                   TRUE
 #define STM32_LSI_ENABLED                   TRUE
-#define STM32_HSE_ENABLED                   FALSE
+#define STM32_HSE_ENABLED                   TRUE
 #define STM32_LSE_ENABLED                   FALSE
 #define STM32_CLOCK48_REQUIRED              TRUE
 #define STM32_SW                            STM32_SW_PLL
@@ -112,7 +112,7 @@
  * I2C driver system settings.
  */
 #define STM32_I2C_USE_I2C1                  TRUE
-#define STM32_I2C_USE_I2C2                  True
+#define STM32_I2C_USE_I2C2                  TRUE
 #define STM32_I2C_USE_I2C3                  FALSE
 #define STM32_I2C_BUSY_TIMEOUT              50
 #define STM32_I2C_I2C1_RX_DMA_STREAM        STM32_DMA_STREAM_ID(1, 0)

@@ -35,11 +35,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // ROWS: Top to bottom, COLS: Left to right
 /* Row pin configuration
 */
-#define MATRIX_ROW_PINS { F1, F2, F6, F7, B7, D0, D2, D3 }
+#define MATRIX_ROW_PINS { F7, E2, B6, B4, D7, D6, D5, D2 }
 
 /* Column pin configuration
  */ 
-#define MATRIX_COL_PINS { B6, B5, B4, B3, B2, B1, B0, E7, E6, F0, F3, F4, F5, D1, D4, D5, D6, D7 }
+#define MATRIX_COL_PINS { E6, B0, F0, B1, F1, B2, F4, B3, F5, F6, C6, C7, B5,  D4, D3, D0, D1, B7 }
 
 #define UNUSED_PINS
 

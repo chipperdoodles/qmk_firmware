@@ -26,9 +26,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC, KC_PGUP, KC_PGDN, KC_BSPC, \
           KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS, \
           KC_P7, KC_P8, KC_P9, KC_PPLS, \
-KC_LEFT, KC_RIGHT, KC_P4, KC_P5, KC_P6, \
+KC_EQL, KC_LGUI, KC_P4, KC_P5, KC_P6, \
+KC_LSFT, KC_LCTL, KC_P1, KC_P2, KC_P3, KC_PENT, \
+MO(1), MO(2), KC_P0, KC_PDOT      \
+),
+
+ [1] = LAYOUT( /*  */
+          KC_ESC, KC_PGUP, KC_PGDN, KC_BSPC, \
+          KC_VOLD, KC_MPLY, KC_MUTE, KC_VOLU, \
+          KC_TAB, KC_UP, KC_SPC, KC_TRNS, \
+KC_LEFT, KC_RIGHT, KC_LEFT, KC_DOWN, KC_RIGHT, \
 KC_UP, KC_DOWN, KC_P1, KC_P2, KC_P3, KC_PENT, \
-KC_TAB, KC_SPC, KC_P0, KC_PDOT      \
+KC_TRNS, KC_TRNS, KC_P0, KC_PDOT      \
+),
+
+[2] = LAYOUT( /* music */
+          RESET, KC_TRNS, KC_TRNS, KC_DEL, \
+          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
+          BL_TOGG, RGB_VAI, BL_DEC, BL_INC, \
+KC_LEFT, KC_RIGHT, RGB_SAD, RGB_TOG, RGB_SAI, \
+KC_UP, KC_DOWN, RGB_HUD, RGB_VAD, RGB_HUI, RGB_MOD,\
+KC_TAB, KC_SPC, MU_MOD, MU_TOG      \
 ),
 };
 

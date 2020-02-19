@@ -1,5 +1,4 @@
 # project specific files
-SRC = matrix.c
 
 ## chip/board settings
 # - the next two should match the directories in
@@ -51,5 +50,5 @@ COMMAND_ENABLE = no    # Commands for debug and configuration
 #NKRO_ENABLE = yes     # USB Nkey Rollover
 AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = no
-CUSTOM_MATRIX = yes
+CUSTOM_MATRIX = no
 #SERIAL_LINK_ENABLE = yes

@@ -31,7 +31,7 @@ KC_LSFT, KC_LCTL, KC_P1, KC_P2, KC_P3, KC_PENT, \
 MO(1), MO(2), KC_P0, KC_PDOT      \
 ),
 
- [1] = LAYOUT( /*  */
+ [1] = LAYOUT( /* media */
           KC_ESC, KC_PGUP, KC_PGDN, KC_BSPC, \
           KC_VOLD, KC_MPLY, KC_MUTE, KC_VOLU, \
           KC_TAB, KC_UP, KC_SPC, KC_TRNS, \

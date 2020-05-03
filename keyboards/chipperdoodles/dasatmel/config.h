@@ -24,9 +24,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0003
-#define MANUFACTURER    noties
+#define MANUFACTURER    Chipperdoodles
 #define PRODUCT         dasatmel
-#define DESCRIPTION     QMK keyboard firmware for dasatmel
+#define DESCRIPTION     QMK firmware for DasKeyboard Replacement Controller
 
 /* key matrix size */
 #define MATRIX_ROWS 8

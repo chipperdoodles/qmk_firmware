@@ -3,9 +3,6 @@
 ## Bluetooth Known Supported Hardware
 Currently Bluetooth support is limited to avr based chips. For Bluetooth 2.1 Qmk has support for RN-42 HID Firmware and Bluefruit EZ Key the later of which is not produced anymore. For more recent BLE protocols currently only the Adafruit Bluefruit SPI friend is directly supported. BLE is needed to connect to iOS devices. Note iOS does not support Mouse Input.
 
-Currently Bluetooth support is limited to AVR based chips. For Bluetooth 2.1 Qmk has support for RN-42 HID Firmware and Bluefruit EZ Key the later of which is not produced anymore. For more recent BLE protocols currently only the Adafruit Bluefruit SPI friend is directly supported. BLE is needed to connect to iOS devices. Note iOS does not support Mouse Input.
-=======
-Currently Bluetooth support is limited to AVR based chips. For Bluetooth 2.1, QMK has support for RN-42 modules and the Bluefruit EZ-Key, the latter of which is not produced anymore. For more recent BLE protocols, currently only the Adafruit Bluefruit SPI Friend is directly supported. BLE is needed to connect to iOS devices. Note iOS does not support mouse input.
 
 |Board                                                           |Bluetooth Protocol          |Connection Type |rules.mk                   |Bluetooth Chip|
 |----------------------------------------------------------------|----------------------------|----------------|---------------------------|--------------|
@@ -18,7 +15,6 @@ Not Supported Yet but possible:
 * HC-05 boards flashed with RN-42 firmware. They apparently both use the CSR BC417 Chip. Flashing it with RN-42 firmware gives it HID capability.
 * Sparkfun Bluetooth Mate
 * HM-13 based boards
->>>>>>> master
 
 ### Adafruit BLE SPI Friend
 Currently The only bluetooth chipset supported by QMK is the Adafruit Bluefruit SPI Friend. It's a Nordic nRF5182 based chip running Adafruit's custom firmware. Data is transmitted via Adafruit's SDEP over Hardware SPI. The [Feather 32u4 Bluefruit LE](https://www.adafruit.com/product/2829) is supported as it's an AVR mcu connected via SPI to the Nordic BLE chip with Adafruit firmware. If Building a custom board with the SPI friend it would be easiest to just use the pin selection that the 32u4 feather uses but you can change the pins in the config.h options with the following defines:

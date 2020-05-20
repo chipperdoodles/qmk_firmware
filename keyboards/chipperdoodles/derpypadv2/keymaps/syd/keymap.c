@@ -25,9 +25,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MULTIMEDIA] = KEYMAP(
         KC_MUTE, KC_VOLD, KC_VOLU, KC_BSPC,
         LT(3, KC_NLCK), KC_PSLS, KC_PAST, KC_PMNS,
-        KC_P7, KC_VOLU, KC_P9,
+        KC_NO, KC_VOLU, KC_NO,
         KC_MPRV, KC_MPLY, KC_MNXT, KC_PPLS,
-        KC_P1, KC_VOLD, KC_P3,
+        KC_NO, KC_VOLD, KC_NO,
         KC_P0, KC_PDOT, KC_PENT),
         
     [MOUSE] = KEYMAP(
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ACL0, KC_ACL1, KC_ACL2),
 
     [ADJUST] = KEYMAP(
-        TO(0), TO(1), TO(2), TO(3),
+        TO(0), TO(1), TO(2), TO(0),
         LT(3, KC_NLCK), OUT_USB, OUT_BT, OUT_AUTO,
         KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO,
@@ -93,7 +93,7 @@ void iota_gfx_task_user(void) {
 struct CharacterMatrix matrix;
 
 matrix_clear(&matrix);
-matrix_write_P(&matrix, PSTR("Derpypad"));
+matrix_write_P(&matrix, PSTR("Syd Crunch!"));
 
 uint8_t layer = biton32(layer_state);
 

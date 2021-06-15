@@ -16,6 +16,15 @@
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 18
 
+#define I2C_DRIVER I2CD2
+#define I2C2_SCL_BANK GPIOB
+#define I2C2_SDA_BANK GPIOB
+#define I2C2_SDA 11
+#define I2C1_SCL 10
+
+//#define I2C1_SDA 5
+//#define I2C1_SCL 6
+//#define I2C1_CLOCK_SPEED 400000
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW

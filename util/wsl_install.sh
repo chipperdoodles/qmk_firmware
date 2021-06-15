@@ -4,7 +4,7 @@ util_dir=$(dirname "$0")
 dir=$(cd -P -- "$util_dir" && pwd -P)
 pushd "$dir";
 
-if [[ $dir != /mnt/* ]];
+if [[ $dir != /z/* ]];
 then
     echo
     echo "You need to clone the qmk_firmware repository outside the linux filesystem."

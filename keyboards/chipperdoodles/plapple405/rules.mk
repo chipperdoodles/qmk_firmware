@@ -29,5 +29,3 @@ DFU_SUFFIX_ARGS = -v 0483 -p df11
 #   change yes to no to disable
 #
 KEYBOARD_SHARED_EP       = yes
-
-OLED_DRIVER_ENABLE = yes
